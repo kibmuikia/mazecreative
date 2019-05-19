@@ -1,9 +1,11 @@
 <template>
-  <div class="about">
-    <p>
-      Summaried information about Maze Creative plus its contact information
-    </p>
-  </div>
+  <v-container class="about">
+    <v-layout row wrap>
+      <v-flex xs12>
+        <p>Summarized information about, Maze Creative</p>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script></script>

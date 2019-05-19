@@ -1,6 +1,6 @@
 <template>
   <div id="navigation-wrapper">
-    <v-toolbar app color="white" class="sofia">
+    <v-toolbar app color="white" class="" scroll-off-screen>
       <v-toolbar-title>Maze Creative</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items
@@ -17,7 +17,7 @@
       ></v-toolbar-side-icon>
     </v-toolbar>
     <!-- . -->
-    <v-navigation-drawer v-model="drawer" temporary app right class="sofia">
+    <v-navigation-drawer v-model="drawer" temporary app right class="">
       <v-toolbar flat color="white" dense>
         <v-list>
           <v-list-tile>
@@ -75,13 +75,13 @@ export default {
 </script>
 
 <style scoped>
-@font-face {
+/*@font-face {
   font-family: sofia-pro;
   src: url("~@/assets/fonts/sofiapro-light.otf");
 }
 .sofia {
   font-family: sofia-pro, sans-serif;
-}
+}*/
 .drawerLinks {
   font-size: 2.4rem;
   transition: color 0.2s ease;

@@ -1,23 +1,23 @@
 <template>
-  <v-app id="mazecreative">
+  <v-app class="sofia">
     <Navigation />
     <v-content class="">
-      <v-container class="" fluid>
-        <router-view></router-view>
-      </v-container>
+      <router-view></router-view>
     </v-content>
+    <Footer />
   </v-app>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 export default {
   name: "App",
   components: {
     // HelloWorld
-    Navigation
+    Navigation,
+    Footer
   },
   data() {
     return {
@@ -26,3 +26,13 @@ export default {
   }
 };
 </script>
+
+<style>
+@font-face {
+  font-family: sofia-pro;
+  src: url("~@/assets/fonts/sofiapro-light.otf");
+}
+.sofia {
+  font-family: sofia-pro, sans-serif !important;
+}
+</style>
