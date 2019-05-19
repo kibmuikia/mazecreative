@@ -1,5 +1,11 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <p>
+      Summaried information about Maze Creative plus its contact information
+    </p>
   </div>
 </template>
+
+<script></script>
+
+<style scoped></style>
