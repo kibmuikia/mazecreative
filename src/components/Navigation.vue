@@ -1,7 +1,10 @@
 <template>
-  <div id="navigation-wrapper">
-    <v-toolbar app color="white" class="sofia">
-      <v-toolbar-title>Maze Creative</v-toolbar-title>
+  <div id="navigation-wrapper" class="sofia">
+    <v-toolbar app color="white" class="" scroll-off-screen>
+      <v-toolbar-title>
+        Maze Media Creative
+        <span class="kibdot">.</span>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items
         class="hidden-sm-and-down"
@@ -17,14 +20,15 @@
       ></v-toolbar-side-icon>
     </v-toolbar>
     <!-- . -->
-    <v-navigation-drawer v-model="drawer" temporary app right class="sofia">
+    <v-navigation-drawer v-model="drawer" temporary app right class="">
       <v-toolbar flat color="white" dense>
         <v-list>
           <v-list-tile>
             <v-list-tile-content>
-              <v-list-tile-title id="drawerTitle"
-                >Maze Creative</v-list-tile-title
-              >
+              <v-list-tile-title id="drawerTitle">
+                MMC
+                <span class="kibdot">.</span>
+              </v-list-tile-title>
             </v-list-tile-content>
             <v-list-tile-action>
               <!-- <v-btn icon @click.stop="drawer = !drawer"> -->
@@ -75,13 +79,13 @@ export default {
 </script>
 
 <style scoped>
-@font-face {
+/*@font-face {
   font-family: sofia-pro;
   src: url("~@/assets/fonts/sofiapro-light.otf");
 }
 .sofia {
   font-family: sofia-pro, sans-serif;
-}
+}*/
 .drawerLinks {
   font-size: 2.4rem;
   transition: color 0.2s ease;
@@ -98,8 +102,8 @@ export default {
   color: grey;
 }
 #drawerTitle {
-  font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: 2px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 </style>
