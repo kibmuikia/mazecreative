@@ -38,10 +38,10 @@ export default {
 </script>
 
 <style scoped>
-.kibdot {
+/*.kibdot {
   color: #00e676;
   border-radius: 50%;
-}
+}*/
 .kibbtn2 {
   /*border-bottom: 2px solid #00e676;*/
   -webkit-transition: all 0.4s ease-out;

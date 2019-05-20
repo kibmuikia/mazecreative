@@ -1,5 +1,5 @@
 <template>
-  <v-layout row wrap justify-space-around class="mt-2">
+  <v-layout row wrap justify-space-around class="mt-2 sofia">
     <v-flex xs12 md12>
       <h6 class="title text-xs-center">
         Delivered Products

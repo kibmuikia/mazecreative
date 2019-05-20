@@ -2,7 +2,9 @@
   <v-app class="sofia">
     <Navigation />
     <v-content class="">
-      <router-view></router-view>
+      <v-scale-transition origin="center center" mode="out-in">
+        <router-view></router-view>
+      </v-scale-transition>
     </v-content>
     <Footer />
   </v-app>
@@ -34,5 +36,9 @@ export default {
 }
 .sofia {
   font-family: sofia-pro, sans-serif !important;
+}
+.kibdot {
+  color: #00e676;
+  border-radius: 50%;
 }
 </style>

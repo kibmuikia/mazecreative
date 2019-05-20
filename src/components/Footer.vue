@@ -15,8 +15,9 @@
       <v-divider></v-divider>
 
       <v-card-text class="">
-        &copy;{{ currentyear }} Muikia.A —
-        <strong>Designed and Developed by Maze Creative</strong>
+        &copy;{{ currentyear }}
+        <span @click="goToTwitter()" class="dev">Muikia.A</span> —
+        <strong>Designed & Developed by Maze Media Creative</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -36,13 +37,18 @@ export default {
       //   "fab fa-instagram"
       // ]
     }; //end-return
-  } //end-data
+  }, //end-data
+  methods: {
+    goToTwitter() {
+      // this.$router.push("https://twitter.com/MuikiaAllan");
+      window.location = "https://twitter.com/MuikiaAllan";
+    } //end-goToTwitter
+  }
 }; //end-export
 </script>
 
 <style scoped>
-.kibdot {
-  color: #00e676;
-  border-radius: 50%;
+.dev {
+  cursor: pointer;
 }
 </style>
