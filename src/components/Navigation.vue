@@ -1,7 +1,29 @@
 <template>
   <div id="navigation-wrapper" class="sofia">
     <v-toolbar app color="white" class="" scroll-off-screen>
-      <v-toolbar-title>
+      <v-img
+        :src="logo_p"
+        alt="Maze Media Creative Logo"
+        contain
+        max-height="55"
+        max-width="55"
+        class="maintoolbarlogo"
+        @click="navigate('/')"
+      >
+        <template v-slot:placeholder>
+          <v-layout fill-height align-center justify-center ma-0>
+            <v-progress-circular
+              indeterminate
+              color="green accent-3"
+            ></v-progress-circular>
+          </v-layout>
+        </template>
+      </v-img>
+      <v-toolbar-title
+        class="pa-1 maintoolbarlogo"
+        style="transform: translateX(-10px);"
+        @click="navigate('/')"
+      >
         Maze Media Creative
         <span class="kibdot">.</span>
       </v-toolbar-title>
@@ -24,10 +46,19 @@
       <v-toolbar flat color="white" dense>
         <v-list>
           <v-list-tile>
+            <v-list-tile-avatar size="55">
+              <v-img
+                :src="logo_p"
+                alt="Maze Media Creative Logo"
+                contain
+              ></v-img>
+            </v-list-tile-avatar>
             <v-list-tile-content>
               <v-list-tile-title id="drawerTitle">
                 MMC
-                <span class="kibdot">.</span>
+                <span class="kibdot" style="transform: translateX(-25px);"
+                  >.</span
+                >
               </v-list-tile-title>
             </v-list-tile-content>
             <v-list-tile-action>
@@ -66,12 +97,13 @@ export default {
       links: [
         { title: "Home", icon: "home", path: "/" },
         { title: "About", icon: "question_answer", path: "/about" }
-      ]
+      ],
+      logo_p: this.$store.getters.logo192_p
     }; //end-return
   }, //end-data
   methods: {
     navigate(path) {
-      console.log(`Going to :: [ ${path} ] *`);
+      // console.log(`Going to :: [ ${path} ] *`);
       this.$router.push(path);
     } //end-navigate
   } //end-methods
@@ -79,13 +111,10 @@ export default {
 </script>
 
 <style scoped>
-/*@font-face {
-  font-family: sofia-pro;
-  src: url("~@/assets/fonts/sofiapro-light.otf");
+.maintoolbarlogo {
+  cursor: pointer;
 }
-.sofia {
-  font-family: sofia-pro, sans-serif;
-}*/
+
 .drawerLinks {
   font-size: 2.4rem;
   transition: color 0.2s ease;

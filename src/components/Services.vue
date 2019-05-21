@@ -1,7 +1,7 @@
 <template>
-  <v-layout row wrap>
+  <v-layout row wrap class="white px-1">
     <v-flex xs12 md3>
-      <h2 class="display-1 font-weight-bold pt-3">
+      <h2 class="display-1 sofia font-weight-bold pt-3">
         Our services
         <span class="kibdot">.</span>
       </h2>

@@ -5,7 +5,7 @@
       <v-flex xs12 md5 class="">
         <v-card flat>
           <v-card-title primary-title>
-            <h1 class="font-weight-bold display-2" style="">
+            <h1 class="font-weight-bold display-2 sofia">
               Tempor incididunt ut labore et dolore magna aliqua
               <span class="kibdot">.</span>
             </h1>

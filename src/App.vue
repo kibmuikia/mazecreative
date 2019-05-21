@@ -40,5 +40,7 @@ export default {
 .kibdot {
   color: #00e676;
   border-radius: 50%;
+  font-weight: 700;
+  font-size: 2rem;
 }
 </style>

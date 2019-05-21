@@ -1,7 +1,7 @@
 <template>
-  <v-layout row wrap justify-space-around class="mt-2 sofia">
+  <v-layout row wrap justify-space-around class="pa-1 white">
     <v-flex xs12 md12>
-      <h6 class="title text-xs-center">
+      <h6 class="title text-xs-center py-3">
         Delivered Products
         <span class="font-weight-thin font-italic">and</span> Samples
       </h6>
@@ -15,7 +15,16 @@
           :alt="sample.title"
           class="kibpic"
           v-ripple
-        ></v-img>
+        >
+          <template v-slot:placeholder>
+            <v-layout fill-height align-center justify-center ma-0>
+              <v-progress-circular
+                indeterminate
+                color="green accent-3"
+              ></v-progress-circular>
+            </v-layout>
+          </template>
+        </v-img>
         <v-card-title>
           <h5 class="title">
             {{ sample.title }}
