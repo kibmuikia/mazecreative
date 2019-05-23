@@ -4,6 +4,7 @@ import Home from "./views/Home.vue";
 
 Vue.use(Router);
 
+/* eslint-disable no-unused-vars */
 export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
@@ -22,5 +23,10 @@ export default new Router({
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    // return desired position
+    // This will simply make the page scroll to top for all route navigations.
+    return { x: 0, y: 0 };
+  }
 });
