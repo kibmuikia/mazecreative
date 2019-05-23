@@ -39,6 +39,7 @@
 // import HelloWorld from '../components/HelloWorld'
 
 export default {
+  name: "home-view",
   components: {
     // HelloWorld
     // Tooltip: () => import("./Tooltip")

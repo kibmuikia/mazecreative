@@ -52,7 +52,7 @@
               class="mx-1"
               tile
               size="45"
-              @click="goto(social.link)"
+              @click="goto(social.link, social.site)"
             >
               <v-img :alt="social.site" :src="social.iconurl" contain>
                 <template v-slot:placeholder>
@@ -131,12 +131,28 @@
       </v-flex>
     </v-layout>
     <!-- . -->
+    <div v-show="tip.show">
+      <Tip
+        :title="tip.title"
+        :information="tip.information"
+        :show="tip.show"
+        :color="tip.color"
+      />
+    </div>
+    <!-- . -->
   </v-footer>
 </template>
 
 <script>
+/* eslint-disable no-console */
+
+import { serverBus } from "@/main";
+
 export default {
   name: "footer-component",
+  components: {
+    Tip: () => import("@/components/Tip")
+  }, //end-components
   data() {
     return {
       currentyear: new Date().getFullYear(),
@@ -145,14 +161,25 @@ export default {
         { title: "About", icon: "question_answer", path: "/about" }
       ],
       logo192: this.$store.getters.logo192,
-      socialmedia: this.$store.getters.socialmedia
+      socialmedia: this.$store.getters.socialmedia,
+      tip: {
+        title: "",
+        information: "",
+        color: "",
+        timeout: null,
+        show: false
+      },
+      showInitialLoader: true
     }; //end-return
   }, //end-data
   methods: {
-    goto(path) {
+    goto(path, site) {
       if (!path) {
-        // console.log(`Path[ ${path} ] is empty(${path.length})`);
-        alert("Coming soon");
+        // console.log(`Path of ${site} [ ${path} ] is empty(${path.length})`);
+        this.tip.title = `${site}`;
+        this.tip.information = `Coming soon!`;
+        this.tip.color = site;
+        this.tip.show = true;
         return false;
       }
       window.location = path;
@@ -166,8 +193,10 @@ export default {
     } //end-navigate
   },
   mounted() {
-    // .
-  }
+    serverBus.$on("resetTip", () => {
+      this.tip.show = false;
+    });
+  } //end-mounted
 }; //end-export
 </script>
 

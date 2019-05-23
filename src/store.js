@@ -71,6 +71,32 @@ export default new Vuex.Store({
           "https://firebasestorage.googleapis.com/v0/b/maze-media-creative.appspot.com/o/images%2Fsocial-icons%2Finstagram.svg?alt=media&token=41aa6bc8-4a0f-4fa7-9cef-6b0141d34880",
         link: ""
       }
+    ],
+    team: [
+      {
+        name: "member one",
+        title: "title one",
+        function:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        pic:
+          "https://firebasestorage.googleapis.com/v0/b/maze-media-creative.appspot.com/o/images%2Fteam%2Fman.svg?alt=media&token=dc53e0a2-f37f-44c6-9dd9-bf789fbb8cc2"
+      },
+      {
+        name: "member two",
+        title: "title two",
+        function:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        pic:
+          "https://firebasestorage.googleapis.com/v0/b/maze-media-creative.appspot.com/o/images%2Fteam%2Ffemale.svg?alt=media&token=4faef810-24af-42d4-a1f8-3e382455b858"
+      },
+      {
+        name: "member three",
+        title: "title three",
+        function:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        pic:
+          "https://firebasestorage.googleapis.com/v0/b/maze-media-creative.appspot.com/o/images%2Fteam%2Fman.svg?alt=media&token=dc53e0a2-f37f-44c6-9dd9-bf789fbb8cc2"
+      }
     ]
   },
   getters: {
@@ -91,6 +117,9 @@ export default new Vuex.Store({
     },
     socialmedia: state => {
       return state.socialmedia;
+    },
+    team: state => {
+      return state.team;
     }
   }, //end-[ getters ]
   mutations: {},

@@ -6,7 +6,13 @@
         <span class="font-weight-thin font-italic">and</span> Samples
       </h6>
     </v-flex>
-    <v-flex xs12 md3 v-for="sample in samples" :key="sample.title" class="ma-1">
+    <v-flex
+      xs12
+      md3
+      v-for="(sample, index) in samples"
+      :key="index"
+      class="ma-1"
+    >
       <v-card height="350px" style="overflow:hidden;">
         <v-img
           :src="sample.url"

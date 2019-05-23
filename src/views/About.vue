@@ -5,9 +5,22 @@
         <p>Summarized information about, Maze Creative</p>
       </v-flex>
     </v-layout>
+    <Team />
   </v-container>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: "about-view",
+  components: {
+    Team: () => import("../components/Team")
+  },
+  data() {
+    return {
+      // .
+    }; //end-return
+  } //end-data
+};
+</script>
 
 <style scoped></style>
