@@ -117,9 +117,16 @@
           <v-flex xs12>
             <p>
               &copy;{{ currentyear }}
-              <v-btn flat small @click="goToTwitter()" class="body-2"
-                >Muikia.A.K</v-btn
+              <v-btn
+                flat
+                small
+                @click="goToTwitter()"
+                class="body-2 kibtweetbtn"
               >
+                <span class="kibscroll">
+                  Muikia.A.K
+                </span>
+              </v-btn>
             </p>
           </v-flex>
           <v-flex xs12>
@@ -203,5 +210,27 @@ export default {
 <style scoped>
 .kibcenter {
   transform: translateX(32.5vw);
+}
+.kibtweetbtn {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.kibtweetbtn:hover {
+  background-color: rgba(153, 255, 102, 0.3);
+}
+.kibscroll {
+  animation: kibscale 2s ease-in-out infinite;
+  transition: all 2s ease-in-out 1s;
+}
+@keyframes kibscale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>

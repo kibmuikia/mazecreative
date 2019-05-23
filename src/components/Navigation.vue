@@ -63,9 +63,23 @@
             </v-list-tile-content>
             <v-list-tile-action>
               <!-- <v-btn icon @click.stop="drawer = !drawer"> -->
-              <v-btn icon @click="drawer = !drawer" color="red accent-1" flat>
-                <v-icon>close</v-icon>
-              </v-btn>
+              <v-layout row justify-space-around align-center>
+                <v-flex xs5>
+                  <v-btn icon color="info" flat @click="showTip()">
+                    <v-icon>info</v-icon>
+                  </v-btn>
+                </v-flex>
+                <v-flex xs5>
+                  <v-btn
+                    icon
+                    @click="drawer = !drawer"
+                    color="red accent-1"
+                    flat
+                  >
+                    <v-icon>close</v-icon>
+                  </v-btn>
+                </v-flex>
+              </v-layout>
             </v-list-tile-action>
           </v-list-tile>
         </v-list>
@@ -85,12 +99,28 @@
       </v-list>
     </v-navigation-drawer>
     <!-- . -->
+    <!-- . -->
+    <div v-show="tip.show">
+      <Tip
+        :title="tip.title"
+        :information="tip.information"
+        :show="tip.show"
+        :color="tip.color"
+        :timeout="tip.timeout"
+      />
+    </div>
+    <!-- . -->
   </div>
 </template>
 
 <script>
+import { serverBus } from "@/main";
+
 export default {
   name: "navigation-component",
+  components: {
+    Tip: () => import("@/components/Tip")
+  }, //end-components
   data() {
     return {
       drawer: false,
@@ -98,15 +128,34 @@ export default {
         { title: "Home", icon: "home", path: "/" },
         { title: "About", icon: "question_answer", path: "/about" }
       ],
-      logo_p: this.$store.getters.logo192_p
+      logo_p: this.$store.getters.logo192_p,
+      tip: {
+        title: "",
+        information: "",
+        color: "",
+        timeout: null,
+        show: false
+      }
     }; //end-return
   }, //end-data
   methods: {
     navigate(path) {
       // console.log(`Going to :: [ ${path} ] *`);
       this.$router.push(path);
-    } //end-navigate
-  } //end-methods
+    }, //end-navigate
+    showTip() {
+      this.tip.title = `Tip`;
+      this.tip.information = `Reload, [Ctrl + Shift + R in Chrome], to get updates!`;
+      this.tip.color = "info";
+      this.tip.timeout = 5000;
+      this.tip.show = true;
+    }
+  }, //end-methods
+  mounted() {
+    serverBus.$on("resetTip", () => {
+      this.tip.show = false;
+    });
+  } //end-mounted
 }; //end-export
 </script>
 
