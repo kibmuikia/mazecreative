@@ -1,5 +1,10 @@
 <template>
-  <v-layout row wrap justify-space-around class="pa-1 white">
+  <v-layout
+    row
+    wrap
+    justify-space-around
+    class="pa-1 white animated fadeInUp slow"
+  >
     <v-flex xs12 md12>
       <h6 class="title text-xs-center py-3">
         Delivered Products

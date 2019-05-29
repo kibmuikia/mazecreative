@@ -43,4 +43,7 @@ export default {
   font-weight: 700;
   font-size: 2rem;
 }
+.kibspace {
+  letter-spacing: 4px !important;
+}
 </style>

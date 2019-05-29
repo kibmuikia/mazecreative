@@ -17,13 +17,11 @@
             </h4>
           </v-card-title>
           <v-card-text class="subheading">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            We combine your business goals with online marketing strategy that
+            drives and breeds business growth. We create and evolve brands
+            through great design. Your website is the most important component
+            of your marketing strategy, whether you're at work or not, your
+            website is always working for your business.
           </v-card-text>
         </v-card>
       </v-flex>
@@ -124,14 +122,24 @@
                 class="body-2 kibtweetbtn"
               >
                 <span class="kibscroll">
-                  Muikia.A.K
+                  Muikia.A
                 </span>
               </v-btn>
             </p>
           </v-flex>
-          <v-flex xs12>
+          <v-flex xs12 class="pt-1">
             <p class="sofia font-weight-bold">
-              Developed by Maze Media Creative
+              Developed by
+              <span>
+                <vue-typer
+                  :text="['Maze Media Creative', 'Muikia Allan']"
+                  caret-animation="smooth"
+                  :type-delay="400"
+                  erase-style="backspace"
+                  class="sofia title"
+                  style="display:inline-block;"
+                ></vue-typer>
+              </span>
             </p>
           </v-flex>
         </v-layout>
@@ -154,11 +162,13 @@
 /* eslint-disable no-console */
 
 import { serverBus } from "@/main";
+import { VueTyper } from "vue-typer";
 
 export default {
   name: "footer-component",
   components: {
-    Tip: () => import("@/components/Tip")
+    Tip: () => import("@/components/Tip"),
+    VueTyper
   }, //end-components
   data() {
     return {

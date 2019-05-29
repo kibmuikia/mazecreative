@@ -1,6 +1,6 @@
 <template>
   <div id="navigation-wrapper" class="sofia">
-    <v-toolbar app color="white" class="" scroll-off-screen>
+    <v-toolbar app color="white" class="animated fadeInDown" scroll-off-screen>
       <v-img
         :src="logo_p"
         alt="Maze Media Creative Logo"
@@ -115,6 +115,8 @@
 
 <script>
 import { serverBus } from "@/main";
+// eslint-disable-next-line
+// import animate from "@/assets/css/animate.min.css";
 
 export default {
   name: "navigation-component",
