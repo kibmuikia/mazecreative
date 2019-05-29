@@ -15,15 +15,18 @@ export default new Vuex.Store({
     services: [
       {
         title: "Digital Marketing",
-        info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+        info:
+          "We combine your business goals with online marketing strategy that drives and breeds business growth. Digital marketing is by far the most measurable marketing medium in our world today, we’ll help you devise and implement a future-proof digital strategy that lets you thrive."
       },
       {
         title: "Branding",
-        info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+        info:
+          "From your logo and color palette to your unique voice, we’ll make sure your brand is built to last. We create and evolve brands through great design."
       },
       {
         title: "Web Design",
-        info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+        info:
+          "Your website is the most important component of your marketing strategy, whether you're at work or not, your website is always working for your business."
       }
     ],
     samples: [
@@ -74,28 +77,40 @@ export default new Vuex.Store({
     ],
     team: [
       {
-        name: "member one",
-        title: "title one",
+        name: "David Owino",
+        title: "C.E.O",
+        function:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        pic:
+          "https://firebasestorage.googleapis.com/v0/b/maze-media-creative.appspot.com/o/images%2Fteam%2Fdavid-tinyjpg.jpeg?alt=media&token=1d9cc615-8f48-4921-91e0-f78001e3a993"
+      },
+      {
+        name: "Junie Samoey",
+        title: "General Manager",
+        function:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        pic:
+          "https://firebasestorage.googleapis.com/v0/b/maze-media-creative.appspot.com/o/images%2Fteam%2Fjunie-tinyjpg.jpg?alt=media&token=99cfb210-0839-4997-95a8-c96698c653a7"
+      },
+      {
+        name: "Kibuthi Allan",
+        title: "Systems Developer",
         function:
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         pic:
           "https://firebasestorage.googleapis.com/v0/b/maze-media-creative.appspot.com/o/images%2Fteam%2Fman.svg?alt=media&token=dc53e0a2-f37f-44c6-9dd9-bf789fbb8cc2"
+      }
+    ],
+    aboutsummary: [
+      {
+        title: "mission",
+        description:
+          "To consistently deliver great performance by providing superior services that help businesses unlock the potential of their brand in turn grow their sales."
       },
       {
-        name: "member two",
-        title: "title two",
-        function:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        pic:
-          "https://firebasestorage.googleapis.com/v0/b/maze-media-creative.appspot.com/o/images%2Fteam%2Ffemale.svg?alt=media&token=4faef810-24af-42d4-a1f8-3e382455b858"
-      },
-      {
-        name: "member three",
-        title: "title three",
-        function:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        pic:
-          "https://firebasestorage.googleapis.com/v0/b/maze-media-creative.appspot.com/o/images%2Fteam%2Fman.svg?alt=media&token=dc53e0a2-f37f-44c6-9dd9-bf789fbb8cc2"
+        title: "vision",
+        description:
+          "We will be a leading creative design agency where creativity meets business growth under the fundamental concept of diversification which will enable us to achieve superior returns for our clients and employees."
       }
     ]
   },
@@ -120,6 +135,9 @@ export default new Vuex.Store({
     },
     team: state => {
       return state.team;
+    },
+    aboutsummary: state => {
+      return state.aboutsummary;
     }
   }, //end-[ getters ]
   mutations: {},

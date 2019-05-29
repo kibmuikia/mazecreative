@@ -1,24 +1,27 @@
 <template>
   <v-container class="">
     <!-- . -->
-    <v-layout row wrap class="kibsec1">
+    <v-layout row wrap class="kibsec1 animated fadeInUp">
       <v-flex xs12 md5 class="">
         <v-card flat>
           <v-card-title primary-title>
             <h1 class="font-weight-bold display-2 sofia">
-              Tempor incididunt ut labore et dolore magna aliqua
+              We are an Independent design agency,
               <span class="kibdot">.</span>
             </h1>
           </v-card-title>
           <v-card-text>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              based in Nairobi Kenya, working with businesses big or small on
+              brand, insight, digital, advertising or website projects.
             </p>
           </v-card-text>
           <v-card-actions>
-            <v-btn flat class="kibbtn text-lowercase pa-2 font-weight-bold"
-              >link one</v-btn
+            <v-btn
+              flat
+              class="kibbtn text-lowercase pa-2 font-weight-bold"
+              @click="navigateTo('about')"
+              >About Us</v-btn
             >
             <v-btn flat class="kibbtn text-lowercase pa-2 font-weight-bold"
               >link two</v-btn
@@ -50,7 +53,12 @@ export default {
     return {
       // .
     }; //end-return
-  } //end-data
+  }, //end-data
+  methods: {
+    navigateTo(path) {
+      this.$router.push({ name: path });
+    }
+  } //end-methods
 };
 </script>
 

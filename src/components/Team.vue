@@ -27,12 +27,14 @@
         <v-card-title>
           <v-layout column>
             <v-flex xs12>
-              <h5 class="headline sofia font-weight-bold kibspace">
+              <h5
+                class="headline sofia font-weight-bold kibspace animated pulse"
+              >
                 {{ member.name }}
               </h5>
             </v-flex>
             <v-flex xs12 mt-1>
-              <h5 class="title sofia grey--text">
+              <h5 class="title sofia grey--text animated fadeInDown slow">
                 {{ member.title }}
               </h5>
             </v-flex>

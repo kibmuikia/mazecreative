@@ -1,7 +1,7 @@
 <template>
-  <v-layout row wrap class="white px-1">
+  <v-layout row wrap class="white px-1 animated fadeInUp">
     <v-flex xs12 md3>
-      <h2 class="display-1 sofia font-weight-bold pt-3">
+      <h2 class="display-1 sofia font-weight-bold pt-3 animated pulse delay-1s">
         Our services
         <span class="kibdot">.</span>
       </h2>
@@ -9,39 +9,74 @@
     <v-flex xs12 md3 v-for="service in services" :key="service.title">
       <v-card flat>
         <v-card-title>
-          <h3 class="headline font-weight-bold">
-            {{ service.title }}
+          <h3 class="headline font-weight-bold sofia kibspace">
+            <vue-typer
+              :text="service.title"
+              caret-animation="smooth"
+              :type-delay="250"
+              :repeat="3"
+              erase-style="backspace"
+            ></vue-typer>
           </h3>
         </v-card-title>
         <v-card-text>
-          <p>
+          <p class="animated pulse delay-1s">
             {{ service.info }}
           </p>
         </v-card-text>
         <v-card-actions>
-          <v-btn flat class="kibbtn2">More</v-btn>
+          <v-btn flat class="kibbtn2" @click="showMore(service.title)"
+            >More</v-btn
+          >
         </v-card-actions>
       </v-card>
     </v-flex>
+    <!-- . -->
+    <div v-show="more.show">
+      <More :id="more.id" />
+    </div>
+    <!-- . -->
   </v-layout>
 </template>
 
 <script>
+import { serverBus } from "@/main";
+import { VueTyper } from "vue-typer";
+
 export default {
   name: "services-component",
+  components: {
+    More: () => import("@/components/More"),
+    VueTyper
+  }, //end-components
   data() {
     return {
-      services: this.$store.getters.services
+      services: this.$store.getters.services,
+      more: {
+        show: false,
+        id: ""
+      }
     }; //end-return
-  } //end-data
+  }, //end-data
+  mounted() {
+    serverBus.$on("resetMore", () => {
+      this.more.show = false;
+    });
+  }, //end-mounted
+  methods: {
+    showMore(serviceid) {
+      this.more.id = serviceid;
+      this.more.show = true;
+      serverBus.$emit("setMore");
+    }
+  } //end-methods
 }; //end-export
 </script>
 
 <style scoped>
-/*.kibdot {
-  color: #00e676;
-  border-radius: 50%;
-}*/
+.kibspace {
+  letter-spacing: 2px !important;
+}
 .kibbtn2 {
   /*border-bottom: 2px solid #00e676;*/
   -webkit-transition: all 0.4s ease-out;
