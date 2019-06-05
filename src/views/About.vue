@@ -19,7 +19,9 @@ export default {
   },
   data() {
     return {
-      // .
+      metaInfo: {
+        title: "About Maze Media"
+      }
     }; //end-return
   } //end-data
 };

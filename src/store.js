@@ -16,7 +16,34 @@ export default new Vuex.Store({
       {
         title: "Digital Marketing",
         info:
-          "We combine your business goals with online marketing strategy that drives and breeds business growth. Digital marketing is by far the most measurable marketing medium in our world today, we’ll help you devise and implement a future-proof digital strategy that lets you thrive."
+          "We combine your business goals with online marketing strategy that drives and breeds business growth. Digital marketing is by far the most measurable marketing medium in our world today, we’ll help you devise and implement a future-proof digital strategy that lets you thrive.",
+        subservices: [
+          {
+            title: "SEO",
+            description:
+              "Search engine optimization will help your website perform well in search engines. SEO includes a whole range of techniques that are used to boost the ranking of the site."
+          },
+          {
+            title: "Social Media",
+            description:
+              "Growing your followers on social media will help you increase word of mouth and referrals. Our social media marketing services will help you increase your followers with relevant people. We will ensure that your followers match the demographics, interests, and behaviors of your typical customers."
+          },
+          {
+            title: "Content Marketing",
+            description:
+              "Our agency’s content marketing services will help you increase website traffic from your online marketing channels. We craft compelling, valuable content that gets to heart of your readers, that will earn trust with your audience."
+          },
+          {
+            title: "Email Marketing",
+            description:
+              "Our email marketing services help you speed up your sales cycle. The goal of email marketing is to move your prospects from one stage of your sales funnel to the next."
+          },
+          {
+            title: "PPC - Google Search Ads",
+            description:
+              "(Paid Per Click) Why not use the Google Search Network to place ads on the search engine results pages. When your audience searches for businesses like yours, your ads will appear to direct traffic to your website"
+          }
+        ]
       },
       {
         title: "Branding",
@@ -82,7 +109,7 @@ export default new Vuex.Store({
         function:
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         pic:
-          "https://firebasestorage.googleapis.com/v0/b/maze-media-creative.appspot.com/o/images%2Fteam%2Fdavid-tinyjpg.jpeg?alt=media&token=1d9cc615-8f48-4921-91e0-f78001e3a993"
+          "https://firebasestorage.googleapis.com/v0/b/maze-media-creative.appspot.com/o/images%2Fteam%2Ftakephoto%20(1).jpg?alt=media&token=f408ed54-d93c-4d77-9172-f1083db9dc83"
       },
       {
         name: "Junie Samoey",
