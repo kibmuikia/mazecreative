@@ -65,9 +65,9 @@ export default {
   }, //end-mounted
   methods: {
     showMore(serviceid) {
+      serverBus.$emit("setMore");
       this.more.id = serviceid;
       this.more.show = true;
-      serverBus.$emit("setMore");
     }
   } //end-methods
 }; //end-export
